@@ -19,7 +19,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println("This is new");
+        System.out.println("This is After Adding Noy");
         System.out.println("fdd");
         launch(args);
     }
