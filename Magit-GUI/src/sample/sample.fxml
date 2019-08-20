@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -21,7 +21,7 @@
                       <MenuItem mnemonicParsing="false" text="From PC" />
                     </items>
                   </Menu>
-                  <MenuItem mnemonicParsing="false" text="Initilize Repository" />
+                  <MenuItem mnemonicParsing="false" onAction="#newWindow" text="Initilize Repository" />
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
