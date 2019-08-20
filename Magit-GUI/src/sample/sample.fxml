@@ -21,7 +21,7 @@
                       <MenuItem mnemonicParsing="false" text="From PC" />
                     </items>
                   </Menu>
-                  <MenuItem mnemonicParsing="false" onAction="#newWindow" text="Initilize Repository" />
+                  <MenuItem mnemonicParsing="false" onAction="#InitializeRepositoryWindow" text="Initilize Repository" />
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
