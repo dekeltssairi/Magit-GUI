@@ -1,14 +1,12 @@
 package MainApp;
 
+import InitializeRepository.InitializeRepositoryController;
 import javafx.event.*;
 import javafx.fxml.*;
-import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
 import javafx.stage.*;
 import logic.*;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,8 +23,9 @@ public class MainAppController implements Initializable {
 
     @FXML private TextField m_PathToRepository;
 
-    public void  initializeRepository(ActionEvent i_Event) {
-        m_MyAmazingGitEngine.LoadExistRepository(m_PathToRepository.getText());
+    public void  initializeRepository(String i_RepositoryName, String i_RepositoryPathStr) {
+        m_MyAmazingGitEngine.CreateRepositoryFromPath(i_RepositoryName,i_RepositoryPathStr);
+        // show WC on FXML
     }
 
     @FXML
@@ -34,9 +33,11 @@ public class MainAppController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/InitializeRepository/InitializeRepository.fxml"));
             Parent root = (Parent) fxmlLoader.load();
+            InitializeRepositoryController IRController =(InitializeRepositoryController)fxmlLoader.getController();
+            IRController.SetMainAppController(this);
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Initialize repository");
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -51,6 +52,7 @@ public class MainAppController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Set username");
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
 
         } catch (Exception e) {

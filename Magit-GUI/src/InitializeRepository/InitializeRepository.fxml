@@ -20,7 +20,7 @@
                         <TextField fx:id="m_RepositoryName" alignment="CENTER" prefHeight="25.0" prefWidth="278.0" />
                     </children>
                 </HBox>
-                <Button fx:id="m_LoadBtn" mnemonicParsing="false" text="LOAD" />
+                <Button fx:id="m_LoadBtn" mnemonicParsing="false" onAction="#LoadBtnAction" text="LOAD" />
             </children>
         </VBox>
     </children>
