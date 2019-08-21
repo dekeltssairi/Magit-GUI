@@ -25,8 +25,8 @@ public class MainAppController implements Initializable {
 
     @FXML private TextField m_PathToRepository;
 
-    public void  initializeRepository(String i_RepositoryName, String i_RepositoryPathStr) {
-        m_MyAmazingGitEngine.CreateRepositoryFromPath(i_RepositoryName,i_RepositoryPathStr);
+    public void  initializeRepository(String i_RepositoryPathStr, String i_RepositoryName) {
+        m_MyAmazingGitEngine.CreateRepositoryFromPath(i_RepositoryPathStr, i_RepositoryName);
         // show WC on FXML
     }
 
