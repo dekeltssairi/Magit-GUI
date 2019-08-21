@@ -14,7 +14,7 @@
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#SetUserName" text="Set UserName" />
+                        <MenuItem mnemonicParsing="false" onAction="#SetUserNameWindow" text="Set UserName" />
                         <Menu mnemonicParsing="false" text="Load Repository">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="From Xml" />
